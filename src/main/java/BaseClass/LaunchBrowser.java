@@ -20,7 +20,7 @@ public class LaunchBrowser {
 	{
 		
 		
-	//	System.setProperty("webdriver.chrome.driver","C://Program Files//chromedriver.exe");
+	
 		
 		
           prop = new Properties();	
@@ -29,17 +29,31 @@ public class LaunchBrowser {
           
           prop.load(fls);
           
-          System.out.println(prop.getProperty("url"));
+          if(prop.getProperty("browser").equals("chrome"))
+          {
+        	  System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") +"\\src\\main\\java\\Drivers\\chromedriver.exe");
+        	  
+        	  driver = new ChromeDriver();
+        	  
+        	  
+        	  
+        	  
+          }
+        			  
+          
+         
 		
-	/*	  System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") +"\\src\\main\\java\\Drivers\\chromedriver.exe");
+	    
 		
-		  driver = new ChromeDriver();
+		  
 		  
 		  driver.get("https://www.google.com");
 		  
 		  
 		  
-		 */ 
+		  
+		  
+		
 		  
 		  
 		

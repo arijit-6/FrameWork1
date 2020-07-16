@@ -16,7 +16,7 @@ public class LaunchBrowser {
 	
 	public static FileInputStream fls;
 	
-	public static void main(String [] args) throws IOException
+	public static WebDriver launchURL() throws IOException
 	{
 		
 		
@@ -41,13 +41,14 @@ public class LaunchBrowser {
           }
         			  
           
+          
          
 		
 	    
 		
 		  
 		  
-		  driver.get("https://www.google.com");
+		  return driver;
 		  
 		  
 		  

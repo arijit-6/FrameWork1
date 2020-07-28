@@ -37,17 +37,19 @@ public class enterDetailsHomePage  {
 	
 	
 	@Test
-	public void enter_Values_FromDestination_Test() throws IOException
+	public void SearchFlights_Test() throws IOException
 	{
 		
 		Utility ut = new Utility(driver);
 		
 		//rd = new ReadData();
 		
-		HashMap<String,String> tc = ReadData.PassDataToTestCase(System.getProperty("user.dir")+"\\src\\main\\java\\Data\\TestSuite1\\Data.xlsx","Sheet1","enterDetailsHomePage");
+		HashMap<String,String> tc = ReadData.PassDataToTestCase(System.getProperty("user.dir")+"\\src\\main\\java\\Data\\TestSuite1\\Data.xlsx","Sheet1","SearchFlights");
 		
-		ut.enterText(HomePageSpiceJet.fromDestination,tc.get("Destination"));
+		ut.enterText(HomePageSpiceJet.fromDestination,tc.get("FromDestination"));
 		
+		
+		ut.enterText(HomePageSpiceJet.toDestination,tc.get("ToDestination"));
 		
 		
 		

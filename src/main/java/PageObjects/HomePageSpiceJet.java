@@ -10,7 +10,17 @@ public class HomePageSpiceJet  {
 	public static By fromDestination = By.xpath("//*[@id='ctl00_mainContent_ddl_originStation1_CTXT']");
 	
 	
+	public static By toDestination = By.xpath("//*[@id='ctl00_mainContent_ddl_destinationStation1_CTXT']");
 	
+	
+	public static By calenderMonth = By.xpath("//div[contains(@class,'datepicker-group-first')] //*[@class='ui-datepicker-title']/span[1]");
+	
+			
+	public static By nextButton = By.xpath("//*[@title='Next']");	
+	
+	
+	
+			
 	
 	
 	

@@ -19,6 +19,14 @@ public class HomePageSpiceJet  {
 	public static By nextButton = By.xpath("//*[@title='Next']");	
 	
 	
+    public static By dates = By.xpath("//div[contains(@class,'datepicker-group-first')]/table[1] //td[@data-handler='selectDay']/a"); 
+    
+    
+    
+    public static By search = By.xpath("(//input[@type='submit'])[1]");
+		
+		
+	
 	
 	
 	

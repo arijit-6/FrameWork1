@@ -35,17 +35,17 @@ public class Utility {
 	
 	
 	
-	public void selectDate(By by, String textMonth, By by1, String textDate)
+	public void selectDate(By month, String textMonth, By nextbutton,By date, String textDate)
 	{
 		
 		
-		while(!driver.findElement(by).equals(textMonth))
+		while(!driver.findElement(month).getText().equals(textMonth))
 		{
-			driver.findElement(by1).click();
+			driver.findElement(nextbutton).click();
 			
 		}
 		
-		List<WebElement> dates = driver.findElements(by1);
+		List<WebElement> dates = driver.findElements(date);
 		
 		for(int i=0;i<dates.size();i++)
 		{

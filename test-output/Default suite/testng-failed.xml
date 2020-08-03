@@ -5,7 +5,7 @@
     <classes>
       <class name="TestSute1.enterDetailsHomePage">
         <methods>
-          <include name="enter_Values_FromDestination_Test"/>
+          <include name="SearchFlights_Test"/>
           <include name="OpenURL"/>
         </methods>
       </class> <!-- TestSute1.enterDetailsHomePage -->

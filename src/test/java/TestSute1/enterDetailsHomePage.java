@@ -3,6 +3,7 @@ package TestSute1;
 import java.io.IOException;
 import java.util.HashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 
@@ -52,6 +53,11 @@ public class enterDetailsHomePage  {
 		ut.enterText(HomePageSpiceJet.toDestination,tc.get("ToDestination"));
 		
 		
+		ut.selectDate(HomePageSpiceJet.calenderMonth,tc.get("Month"),HomePageSpiceJet.nextButton,HomePageSpiceJet.dates,tc.get("Date"));
+		
+		//By month, String textMonth, By nextbutton,By date, String textDate
+		
+		ut.click(HomePageSpiceJet.search);
 		
 	}
 	

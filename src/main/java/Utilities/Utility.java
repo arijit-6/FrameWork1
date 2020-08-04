@@ -26,6 +26,13 @@ public class Utility {
 		
 	}
 	
+	public int getNumberOfElements(By element)
+	{
+		
+		return driver.findElements(element).size();
+	}
+	
+	
 	public void click(By element)
 	{
 		

@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import PageObjects.FlightRatesPage;
 import PageObjects.HomePageSpiceJet;
 import Utilities.ReadData;
 import Utilities.Utility;
@@ -32,13 +33,15 @@ public class enterDetailsHomePage  {
 		
 		driver.get("https://www.spicejet.com/");
 		
+		driver.manage().window().maximize();
+		
 		
 		
 	}
 	
 	
 	@Test
-	public void SearchFlights_Test() throws IOException
+	public void SearchFlights_Test() throws IOException, InterruptedException
 	{
 		
 		Utility ut = new Utility(driver);
@@ -58,6 +61,18 @@ public class enterDetailsHomePage  {
 		//By month, String textMonth, By nextbutton,By date, String textDate
 		
 		ut.click(HomePageSpiceJet.search);
+		
+		
+	     Thread.sleep(5000L);	
+	     
+	     if(ut.getNumberOfElements(FlightRatesPage.flightIcon)==ut.getNumberOfElements(FlightRatesPage.flightTimings))
+	     {
+	    	 
+	    	 
+	    	 System.out.println("passed the test");
+	    	 
+	     }
+	
 		
 	}
 	
